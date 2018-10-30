@@ -1,0 +1,805 @@
+Command Line Notes:
+pwd: print working directory
+detailed listing: ls -L
+sort results by file time: ls -T
+sort results by file size: ls - S
+reverse the sorting: ls -R
+include hidden files: ls -A
+detailed list with hidden files: ls -LA
+cd ..: change to previous directory
+
+absolute path start with the / symbol (root directory)
+
+navigate to desktop by typing:
+cd /User/<your_username>/Desktop
+
+navigate to the root path: cd /
+navigate to users home path: cd ~
+navigate to previously working directory cd -
+
+creating a new folder: mkdir <foldername>
+Removing an empty folder: rmdir <foldername>
+
+create new blank file: touch <filename>
+remove a file: rm <filename>
+remove a git: rm -rf .git
+git commit: git commit -m "example message"
+
+deleting files from a folder: 
+cd ..
+rm -rf my-files
+
+display a file: cat <filename>
+to display more or less of a file: more <filename> less <filename>
+
+copy a file: cp <filename> <copiedfilename>
+copy into a different directory: mkdir copied-file 
+cp hello.txt copied-file/
+
+copying directories which are not empty: cp -r
+
+rename a file by moving it within the same folder:mv <filename>.txt <newfilename>.txt
+
+move file to a new directory: mv <filename>.txt /Users/my_name/Desktop
+
+
+GIT: within the folder in the terminal = git init
+create a file within GIT: touch <filename.txt>
+add a file to the GIT: git add <filename.txt>
+add multiple files at once: git add -A
+check which files are added in the GIT folder: git status
+removing files from GIT: git reset <filename.txt>
+commit a GIT with message: git commit -m "message description"
+
+view commits: git log
+
+add a remote repository git-hub: git remote add <alias> <github-url>
+
+pushing to remote repository: git push <alias> <remote-branch-name>
+
+pull changes from github: git pull <alias> <remote-branch-name>add
+
+
+
+remember to re-make html and css notes:
+
+css box model: 
+border-width: 1px;
+border-style: solid;
+border-color: #17212e;
+
+or you can write it as
+
+border: 1px solid #17212e; (better and faster)
+
+single borders:
+
+border-bottom:
+border-right:
+border-left:
+border-top:
+
+border-width: [border-top] [border-right] [border-bottom] [border-left]
+
+padding: sets the space between the content and the border of an element.
+
+padding: 10px 10px 10px 10px;
+
+padding: [padding-top] [padding-right] [padding-bottom] [padding-left];
+
+padding: 10px; (everything will be set to 10px)
+
+padding: 10px 20px; (top and bottom will be 10, left and right will be 20)
+
+margin: sets the space between the border of an element and the other elements around it. (if no other elements are around, it sets the space between the element and the body tag)
+
+sizes are important html, keep in mind the div size + the padding size + the border size + the margin size
+
+change list style: 
+list-style-type: none;
+
+border-radius: allow you to change the border of a box, making it round.
+border-radius: 20px;
+
+box-sizing: allows you to keep the width of an element when you apply padding to it.
+box-sizing: border-box;
+
+box-shadow: adds a small shadow to a box.
+box-shadow: 2px 2px 10px 0 #eee;
+
+Positioning: pisition property allows you to organize elements on the screen:
+* static
+* relative
+* fixed
+* absolute
+the following properties can be used when setting position:
+top/right/bottom/left
+
+position: static; = means the element is not positioned in any special way. 
+
+position: relative; = behaves same way as static unless you add other properties. top/left/right/bottom and it will move the element relative to where it would normally occur.
+
+position: fixed; = a positioned element is relative to the screen of your device. THe element will always be in the same place, even when you scroll. top/left/right/bottom properties are used. 
+
+[SAMPLE FIXED ELEMENT CODE]
+.fixed {
+ position: fixed;
+  bottom: 0;
+  right: 0;
+  background: #00D1AE;
+  opacity: 0.8;
+  color: #111;
+  border: 3px solid #00D1AE;
+  font-weight: bold;
+  padding: 10px;
+  width: 500px;
+ }
+ 
+ 
+position: absolute; = works similarly to fixed position, but instead of being positioned relative to the viewport, its positioned to the nearest positioned element other than statatic.
+ 
+
+floats: specifies that an element should be taken out of the normal flow and placed along the left or right side of its container.
+
+float: left/right/none/inherit;
+
+clear: used to separate the float from other elements.
+
+clear: left/right/both/none;
+
+
+display: block/inline-block; = changes element from inline to block or the other way around
+
+iframe: letsyou insert google maps
+
+table tag: 
+thead: block element, set of rows defining the head of the columns.
+tbody: block element, set of rows defining the body of the columns of the table.
+tr: block element, represents a row in a table.
+th: inline-block element, represents a column inside a row in a table that is a heading of that column.
+td: inline-block element, represents a column inside a row in a table. Allows rows with different numbers of columns inside. 
+
+difference between TD and TH: th is used just for titles and headers, while td is used for the content.
+
+<table>
+	<thead>
+	 <tr>
+	  <th>Column 1</th>
+	  <th>Column 2</th>
+	 </tr>
+	</thead>
+	<tbody>
+	 <tr>
+	  <td>Row 1</td>
+	  <td>Row 1</td>
+	  <td>Row 1</td>
+	 </tr>
+	 <tr>
+	  <td>Row 2</td>
+	  <td>Row 2</td>
+	  <td>Row 2</td>
+	 </tr>
+	 <tr>
+	  <td>Row 3</td>
+	  <td>Row 3</td>
+	  <td>Row 3</td>
+	 </tr>
+	 <tr>
+	  <td>Row 4</td>
+	  <td>Row 4</td>
+	 </tr>
+	</tbody>
+</table>
+
+colspan: used when you need a column to take 2 or more column cells in the same row. 
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th colspan="2">Surnames</th>
+  </tr>
+  <tr>
+    <td>Name</td>
+    <td>Surname 1</td>
+    <td>Surname 2</td>
+  </tr>
+  <tr>
+    <td>Name</td>
+    <td>Surname 1</td>
+    <td>Surname 2</td>
+  </tr>
+  <tr>
+    <td>Name</td>
+    <td>Surname 1</td>
+    <td>Surname 2</td>
+  </tr>
+</table>
+
+rowspan: used when you need a column to take 2 or more row cells in the same column line. 
+
+<table>
+  <tr>
+    <th>Month</th>
+    <th>Savings</th>
+    <th>Savings for holiday!</th>
+  </tr>
+  <tr>
+    <td>January</td>
+    <td>$100</td>
+    <td rowspan="2">$50</td>
+  </tr>
+  <tr>
+    <td>February</td>
+    <td>$80</td>
+  </tr>
+</table>
+
+cellspacing: separates the cells on a table. Separation is set between the cell borders, measured in pixels. 
+
+<h2>Table with no cellspacing</h2>
+
+<table cellspacing="5">
+  <tr>
+    <td>Row 1</td>
+    <td>Row 1</td>
+  </tr>
+  <tr>
+    <td>Row 2</td>
+    <td>Row 2</td>
+  </tr>
+</table>
+
+<h2>Table with cellspacing</h2>
+
+<table cellspacing="10">
+  <tr>
+    <td>Row 1</td>
+    <td>Row 1</td>
+  </tr>
+  <tr>
+    <td>Row 2</td>
+    <td>Row 2</td>
+  </tr>
+</table>
+
+table borders (css):
+
+table, th, td {
+	border: 1px solid black;
+}
+
+form: block element, contains a series of inputs, labels, and buttons that will be used to retrieve data from the user and then send that data to the server. 
+
+<form action="web-url">
+	<label for="username">Username:</label>
+	<input type="text" name="username"
+ id="username"><br>
+ 	<label for="password">Password:</label>
+	<input type="text" name="password"
+ id="password"><br>
+ 	<button type="submit">Log in</button>
+</form>
+
+action: the forms task (backend development), is to take input from a user and sent it to a server. Action points to what url the form will send its data to. Default action is to submit the data to the same page its on. 
+
+input: inline element. allows the user to enter data of differente types.
+
+type: TEXT: allows the user to fill the input with any type of text. type="text" is also the default type of input. 
+
+type: TEXTAREA: also allows the user to submit text.
+
+<form>
+	<div> 
+	<label for="name">Name</label><br>
+	<input type="text" id="name">
+   </div>
+   <div>
+	<label for="comment">Comment</label>
+   <br>
+	<textare id="comment"></textarea>
+   </div>
+  </form>
+  
+text vs. textarea: textarea allows free form typing on multiples lines, text input accepts single line with a max length of 255 characters. 
+
+DO NOT USE CSS TO RESIZE TEXTAREA: size is modified with the attributes rows and cols. 
+
+<form>
+ <div>
+	<label for="name">Name</label><br>
+	<input type="text" id="name">
+ </div>
+ <div>
+ 	<label for="comment">Comment</label>
+<br>
+	<textarea rows="10" cols="50"
+id="comment"></textarea>
+ </div>
+</form>
+
+type: number: allows the user to enter numbers, additionally, when cliked two arrows will be added to the input so the user can increase or decrease the number. When the form is sent it will check to validate the number. (some browsers don't allow you to entenr text in a number input field)
+
+type: email: allows the user to input text, specifically text in the format of an email.
+
+<form> 
+ <input type="email">
+ </form>
+ 
+type: radio: allows the user to mark only one of multiple choices (by selecting the circle of your choice)
+
+<form> 
+	<input type="radio" id="mia"
+value="Miami" name="iron-city">
+	<label for="mia">Miami</label>
+	
+	<input type="radio" id="mad"
+value="madrid" name="iron-city">
+	<label for="mad">Madrid</label>
+	
+	<input type="radio" id="bcm"
+value="Barcelona" name="iron-city">
+	<label for="bcn">Barcelona</labels>
+</form>
+
+
+type: checkbox: allows the user to select one or more options. Used either for selecting multiple options, or marking an option as selected. 
+
+multiple options:
+<form>
+	<input type="checkbox" name="iron-merchan"
+value="t-shirt"/>T-shirt
+	<input type="checkbox" name="iron-merchan"
+value="cup"/> Cup
+	<input type="checkbox" name="iron-merchan"
+value="notebook"/> Notebook
+</form>
+
+marking option as selected:
+<form> 
+	<input type="checkbox"
+name="agreement" checked/> You agree with the terms and conditions of this site
+</form>
+
+type: select:  allows the user to select one option from a dropdown list. Each of the options are resented by an option tag (<option></option>).
+
+<form>
+  <select name="iron-city>
+  	<option value="mad>Madrid</option>
+	<option value="bcn">Barcelona</option>
+	<option value="mia">Miami</option>
+  </slect>
+</form>
+
+label: inline element: represents a caption for html inputs of all types.
+
+<forn> 
+	<label for="name">Name:</label>
+	<input type="text" id="name">
+</form>
+
+label vs. input: The input attribute is associated with the label for attribute. This is not just a semantic relation, but it has a simple functionality: you can put the focus on an input by clicking on the inpurt or on the associated label. 
+
+button: inline element
+different ways to do buttons in html5:
+
+with the input tag:
+<input type="button" value="Click me!">
+<input type="submit" value="Click me!">
+
+with the button tag:
+<button type="submit">Click me!</button>
+<button type="button">Click me!</button>
+
+types of buttons:
+submit: normally used inside forms to send the data it contains.
+button: used as a general button for any other purpose when it's clicked, such as playing a video, or displaying a pop up.
+
+input button: element that represents a simple button. By default, it does nothing when you click on it.
+
+submit button: element that represents a simple button. By default, it does nothing when you click on it, unless it is located in a form. 
+
+
+
+JAVASCRIPT:
+
+JavaScript is an object oriented language, which is used to manipulate your website. Example: Gmail: when you get a new email, you don't have to refresh. The new email just shows up when it is retrieved from a server.
+"Java is to JavaScript what Car is to Carpet"
+
+printing to the console:
+console.log("");
+
+variable: name of a value
+
+Name: a name is a reference for a variable, but does not determine the type of value. 
+
+javascript values: string, number, array, object
+
+declaring a variable:
+var variablename;
+
+or declaring multiple variables:
+var var1, var2, var3;
+
+rules for naming a variable: can contain letters, numbers, and the symbols _ and $. Names cannot start with a number. Variables are case sensitive. 
+
+Variable's can be changed along the code.
+
+
+
+
+Class notes: 
+first day:
+
+es6 javascript: const or let instead of var
+remember pemdas
+
+making a line break: \n
+commenting on code: //
+getting a letter from a word: variableName.indexOf(''); 
+checking for a letter: variableName.includes('')
+multiplying strings: ''.repeat()
+boolean: true or false
+%: multiple of
+switch statements: switch (){}
+
+loops:
+while: loop you choose when you want it to stop when something happens
+all loops are built on top of while loops 
+
+while () {
+}
+
+for: creates a loop with three different values separated by semicolons
+
+for () {
+}
+
+do while: creates a loop that executes the code once without checking if the condition is true, then it will repeat the loop as long as the condition is true.
+
+do {
+	code block to be executed
+} while (condition);
+
+break statement: breaks the loop and conitnues executing the code after the loop.
+
+
+HTML/ CSS:
+block element: always starts on a new line and takes up the full width available. 
+Inline: does not start on a new line and only takes up as much width as necessary.
+span: used as a container for some text. most generic inline element.
+
+div: most gerenic block element.
+<pre>: for communicating with other developers only.
+
+form: sections that allows the user to input information in the page. Holds inputs, radio buttons, select boxers, etc.
+
+<fieldset>: used to group several controls as well as labels (<label>) within a web form.
+
+emphasizing text: <em></em>
+
+strong tag: <strong></strong>
+
+Bold: <b></b>
+
+italics: <i></i>
+
+<script>: used to embed or reference an executable script within an html file.
+
+<script src="filename"></script>
+
+
+<span>: generic inline container for phrasing content, which does not inherently represent anything.
+
+<a>: defines a hyperlink.
+
+<img>: defines an image.
+
+<button>: clickable button.
+
+<input>: used to create interative controls for we=based forms in order to accept data from the user.
+
+<label> represents a caption for an item in a user interface, can be associated with a control a control either by placing the control element inside. one input can be associated with multiple labels.
+
+<select>: represents a control that presents a menu of options. THe options within the menu are represented by <option> elements, which can be grouped by <optgroup> elements.
+
+<textarea>: represents a multi-line plain-text editing control. more than 255 characters.
+
+css: 
+if its an ID use #, if its a class use a . [period].
+ID will override CLASS everytime.
+
+JAVASCRIPT FUNCTIONS: name functions using camelCase
+
+function <name> ([<argument_list>]) {
+	<instructions>
+	
+	[return <expression>;]
+}
+
+function arguments: an expression used when calling the method.
+function parameters: the variable which is part of the method's signature (method declaration).
+
+returning values: when a returning value is not specified, the function returns undefined. 
+
+you can store a function inside a variable
+
+Math.floor: rounds it down
+Math.ceil: rounds it up
+Math.random(); : random number between 0 and 1 (but never 0 or 1)
+Math.round(): round number
+const: use instead of var
+
+anonymous functions: function delcared without any named identifier to refer to it. usually not accesible after its initial creation, unless we assign it to a variable and keep a reference to it.
+example: 
+var anon = function(){
+	console.log("this is an anonymous func");
+}
+
+formal vs. actual parameters:
+the placeholder names appearing in the argument list are called formal parameters.
+when we call the function, we pass it the actual parameters.
+
+!: not equal to.
+
+recursion: a selfcallin function with an abort criterium to prevent infinite looping. 
+example:
+function factorial(number) {
+	if (number === 0) {return - 1}
+	}
+
+factorial(5)
+5 * factoria(4)
+
+[mutitplies 5 * 4 * 3 * 2 * 1 in this ex]
+
+high-order functions: functions can return functions or receive 
+
+variable scope: portion of code where a variable can be seen. the rule: variables declared inside a function are not accesible outside that function. 
+
+Arrays: data structures that allow us to group a collection of elements together in one variable.
+
+variableName.push(): adds it to the end of the array. 
+variableName.unshift(): adds is to the beginning.
+variableName[<number>]: replaces whatever is at that position.
+variableName.pop: removes the end.
+variableName.shift(): removes the first one.
+variableName.splice(argument1,argument2, arugment3: first argument selects and the second one sees how many you erase, third argument will add. (any additional arguments will be added to the array)
+
+for each loops: iterates a specified variable over all values of objects properties. For each distinct property, a specified statement is executed. 
+example: 
+variableName.forEach(()=>{})
+
+=>: the same as 'function'
+
+JASMINE: an automated testing framework for Javascript.
+
+position: relative; element is positioned relative to its normal position.
+
+position: absolute; element is positioned relative to its first positioned acenstor element (not static).
+
+position: static; default value.
+
+position: fixed; element is positioned relative to the browser. 
+
+FLOAT:
+float: left/right/top/bottom;
+
+having space not wrap around the float: CLEAR: both/right/top/bottom/left.
+
+know: 0.1 + 0.3 in javascript doesnt work
+0 === false / 1 === true
+
+javascript day 3:
+
+objects: group values that belong together in a single unit. Objects store relationships between variables and properties using key and value associations. 
+object Structure: 
+let <name> {
+<content>
+}
+
+add to an object: 
+<name>[''] = '';
+
+<varName>.<inValueName> = "";
+
+remove: 
+delete <varName>.<value>
+
+returning values from object:
+varName.<valueInObjectName>
+
+IN operator: used to verify if a certain property exits in an object. Returns a boolean depending on if the property exists or not. 
+
+
+update a value: 
+<varName>.<valueName> = "";
+
+list properties: useful when you have a huge object and you are not sure which properties and values it has.
+
+Object.keys(): receives as a parameter the object you want to inspect.
+Object.keys(<varName>); [always cap O]
+
+arrays in arrays: two dimensional array.
+
+css: 
+:hover {}
+
+changes the look of something once the mouse hovers over.
+
+
+javascript: map, reduce & filter:
+
+map: similar to forEach. For each simply iterates over an array and allows us to something with each element. Map iterates over an array, but returns a brand new array with each element in there.
+
+map is used to transform each element inside an array into something else.
+
+map always returns a value, or else your new array will be filled with a bunch of undefineds.
+
+syntax:
+
+array.map(function(currentValue, index, arr), thisValue)
+
+reduce: function that turns a list of values into one value. 
+
+syntax: 
+
+array.reduce(
+	callback(accumulator, current, currentIndex, originalArray),
+	initialValue
+)
+
+accumulator: the accumulated value of each call.
+current: current element in each iteration.
+currentIndex: index of the current element. Starts at 0 if initialValue is defined, otherwise starts at 1.
+originalArray: the original array. Optional.
+
+javscript: Sort, Reverse & Splice: 
+
+sort: sorts items in an array. sort can alphabetic or numeric, and either ascending or descending. 
+
+array.sort(compareFunction)
+
+compareFunction: a function that defines an alternative sort order.
+
+example: (sort an array in ascending order: 
+var points = [40, 100, 1, 2, 5];
+points.sort(function(a, b){return a-b});
+
+FLEXBOX: 
+first define a flexbox container. 
+flex container properties: flex-direction/flex-wrap/flex-flow/justify-content/align-items/align-content
+
+flex-direction: defines in which direction the container wants to stack the flex items. (column or row || column-reverse and row-reverse almost never used)
+
+flex-wrap: specifies where the flex items should wrap or not (wrap or nowrap).
+
+flex-flow: sets flex-direction and flex-wrap properties.
+
+justify-content: used to align the flex items (center, flex-start, flex-end, space-around, space-between).
+
+align-items: used to align the flex items vertically (center, flex-start, flex-end, stretch, baseline).
+
+align-content: used to align the flex lines (space-between, space-around, stretch, center, flex-start, flex-end)
+
+perfect centering: use justify-content: center; and align-items: center;
+
+child elements (items): order/flex-grow/flex-shrink/flex-basis/flex/align-self.
+
+order: specifies the order of the flex items (default value is 0).
+
+flex-grow: specifies how much a flex item will grow relative to the rest of the flex items (default value is 0).
+
+flex-shrink: specifies how much a flex item will shrink relative to the rest of the flex items (default value is 1).
+
+flex-basis: specifies the initial length of a flex item.
+
+flex: is a shorthand property for the flex-grow, flex-shrink, and flex-basis properties.
+
+align-self: specifies the aligment for the item inside the flexible container.
+
+
+DOM: document object model is an api for html and xml documents. Provides a structured representation of the document and dfines a way that the structure can be accessed from JavaScript. Allows us to change the document structure, style or the content from JavaScript.
+
+Document object: #document allows you to acces the website from javascript.
+
+<element> = document.getElementById(id)
+[id must be a string and will return the first occurrence only]
+
+JQUERY: 
+
+what can it do: change elements in html, event handling, animate content on the page, fetch new content.
+
+jquery object: exposes its method and properties via two properties of the window object called jQuery and $.
+
+dom selectors: allows us to select different elements from the DOM based on an specified criteria.
+
+basic selectors: 
+
+all: selects all elements.
+syntax: $("*")
+
+element: selects all elements with the given tag name.
+syntax: $('element')
+
+.class: selects all elements with the given class.
+syntax: $('.class-name')
+
+id: selects a single element with the given id attribute.
+syntax: $('#id')
+
+
+hierarchy of selectors: give us the possibility to select elements from the DOM based on the CSS rules. ALWAYS RETURN ARRAYAYS.
+
+child: selects all direct child elements specified by "child" within "parent".
+syntax: $('parent > child')
+
+descendant: selects all elements that are descendants of a given ancestor.
+syntax: $('ancestor descendant')
+
+next adjacent: selects all next elements matching "next" that are immediately preceded by a sibling "prev".
+syntax: $('prev ~ siblings')
+
+
+basic filters: allow us to select elements based on their position in the DOM. always return an array and are based on CSS pseudo-classes.
+
+first: selecsts the first matched element.
+syntax: $('.selector:first')
+
+last: selects the last matched element.
+syntax: $('.selector:last')
+
+odd: selects odd elements, zero indexed.
+syntax: $('.selector: odd')
+
+even: selects even elements, zero-indexed.
+syntax: $('.selector-even')
+
+not: selects all elements that do not match the given selector.
+syntax: $(':not(selector)')
+
+
+content filters: lets us select elements based on the content they have. again, these selectors return an array. 
+
+contains: selects all elements that contain specific text.
+syntax: $(".selector:contains(text)")
+
+empty: selects all elements that have no children (including text nodes)
+syntax: $(".selector:empty")
+
+has: selects elements which contain at least one elements that matches the specified selector.
+syntax: $('.selector:has(selector)")
+
+parent: select all elements that have at least one child node (either an element or a text).
+syntax: $(".selector:parent")
+
+
+
+attribute selectors: allow us to select DOM elements based on their attributes. These selectors also return an array.
+
+has attribute: selects element that have the specified attribute, with any value.
+syntax: $("[attribute]")
+
+attribute contains: selects elements that have the specified attribute with a value containing a given substring.
+syntax: $("[attribute*='value']")
+
+attribute contains word: selects elements that have the specified attribute with a value containing a given word, delimited by spaces.
+syntax: $("[attribute~ ='value']")
+
+attribute not equal: selects elements that either don't have the specified attribute, or do have the specified attribute but not with a certain value.
+syntax: $([attribute! ='value'])
+
+attribute starts with: selects elements that have the specified attribute with a value beginning exactly with a given string.
+syntax: $([attribute^='value'])
+
+
+child filters: these selectors are also based on the css pseudo-classes and allows us to select DOM elements based on the children of an element. They will return an array with the matching elements. 
+
+first child: selects all the elements that are the first child of their parent.
+syntax: $(.selector:first-child)
+
+last child: selects all the elements that are the last child of their parent.
+syntax: 
+
+
+
+
