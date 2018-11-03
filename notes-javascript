@@ -801,5 +801,26 @@ last child: selects all the elements that are the last child of their parent.
 syntax: 
 
 
+CANVAS: used to create animations on a website
+
+4 steps to draw new frames:
+
+1. save canvas state: make sure the original state is used each time a frame is drawn, save the original state.
+2. clear the canvas: clear any shapes that have been drawn previously. The easiest way to do this is using the clearRect() method.
+3. draw animated shapes: step where you do the actual frame rendering.
+4. restore canvas state: if you saved it, restore it before drawing a new frame.
+
+Save and restore a canvas state: canvas states are stored on a stack. Every time the save() method is called, the current drawing state is pushed onto the stack. 
 
 
+Scheduling updates: these are used to call functions over a set period of time.
+
+setInterval(method,delay): starts repeatedly executing the function specified by method every delay milliseconds.
+
+setTimeout(method,delay): executes the function specified by function in delay milliseconds.
+
+requestAnimationFrame(callback): tells the browser that you wish to perform an animation and requests that the browser calls a specified function to update an animation before the next repaint.
+
+requestAnimationFrame(): window.requestAnimationFrame() method tells the browser that you wish to perform an animation and requests that the browser calls a specified function to update an animation before the next repaint. Takes argument callback.
+
+moving elements steps: 
